@@ -1,0 +1,29 @@
+@import "general.css";
+
+#top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #6A93CA;
+    margin-bottom: 3vw;
+    width: 100%;
+    height: 80.1vh;
+}
+
+#top img, #textTop {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+}
+
+#top img {
+    width: 24%;
+    border-radius: 0.8vw;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
