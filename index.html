@@ -17,9 +17,9 @@
         <nav class="menu">
             <ul>
                 <li><a onclick="slowScroll('#header')">Accueil</a></li>
-                <li><a onclick="slowScroll('#main')">À propos</a></li>
-                <li><a onclick="slowScroll('#main')">Projets</a></li>
-                <li><a onclick="slowScroll('#footer')">Contact</a></li>
+                <li><a onclick="slowScroll('#about')">À propos</a></li>
+                <li><a onclick="slowScroll('#projects')">Projets</a></li>
+                <li><a onclick="slowScroll('#contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -30,7 +30,43 @@
                 <h1 id="autoText"></h1>
             </div>
         </article>
-        <article id="main">
+
+        <article id="about">
+            <section id="about1">
+                <div id="location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92360.23927459145!2d5.17924606089783!3d43.66361466889698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9f7cbcbe71c0d%3A0xc82a7405822cc2c8!2s13410%20Lambesc!5e0!3m2!1sfr!2sfr!4v1586379322397!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <p>Résidant à Lambesc depuis ma plus tendre enfance...</p>
+                </div>
+
+                <div id="classes">
+                    <h2>Mon parcours</h2>
+                    <p>
+                        Collège Jean Guehenno<br/>
+                        2011 - 2015
+                    </p>
+                    <img src="files/img/arrow_down.png" alt="Flèche bas">
+                    <p>
+                        Lycée Adam de Craponne<br/>
+                        2015 - 2018
+                    </p>
+                    <img src="files/img/arrow_down.png" alt="Flèche bas">
+                    <p>
+                        IUT Informatique<br/>
+                        2018 - 2020
+                    </p>
+                    <img src="files/img/arrow_down.png" alt="Flèche bas">
+                    <p>
+                        ...<br/>
+                        2020 - 2023
+                    </p>
+                </div>
+            </section>
+
+        </article>
+
+        <hr>
+
+        <article id="projects">
             <p >
                 &lt;aurelien&gt;<br/>
                 En cours de construction<br/>
@@ -50,25 +86,41 @@
                 En cours de construction<br/>
                 &lt;/vilminot&gt;
             </p>
+        </article>
 
-            <hr>
-            <p>
-                &lt;aurelien&gt;<br/>
-                En cours de construction<br/>
-                &lt;/vilminot&gt;            &lt;aurelien&gt;<br/>
-                En cours de construction<br/>
-                &lt;/vilminot&gt;            &lt;aurelien&gt;<br/>
-                En cours de construction<br/>
-                &lt;/vilminot&gt;            &lt;aurelien&gt;<br/>
-                En cours de construction<br/>
-                &lt;/vilminot&gt;            &lt;aurelien&gt;<br/>
-                En cours de construction<br/>
-                &lt;/vilminot&gt;
-            </p>
+        <hr>
+
+        <article id="contact">
+            <section>
+                <h2>Me trouver</h2>
+                <div>
+                    <img src="files/img/ic_linkedin.png" alt="Logo Linkedin">
+                    <a href="https://www.linkedin.com/in/aur%C3%A9lien-vilminot/" target="_blank">Linkedin</a>
+                </div>
+                <div>
+                    <img src="files/img/ic_github.png" alt="Logo Github">
+                    <a href="https://github.com/aurelien-vilminot/" target="_blank">Github</a>
+                </div>
+            </section>
+            <section>
+                <h2>Me contacter</h2>
+                <form>
+                    <label id="lastname">Nom</label>
+                    <input type="text" name="lastname" placeholder="Nom" oninput="displayLabel('#' + this.name, this)">
+                    <label id="firstname">Prénom</label>
+                    <input type="text" name="firstname" placeholder="Prénom" oninput="displayLabel('#' + this.name, this)">
+                    <label id="mail">Adresse e-mail</label>
+                    <input type="email" name="mail" placeholder="Adresse e-mail" oninput="displayLabel('#' + this.name, this)">
+                    <label id="message">Message</label>
+                    <textarea name="message" placeholder="Message" oninput="displayLabel('#' + this.name, this)"></textarea>
+                    <input type="submit" name="submit" value="Envoyer">
+                </form>
+            </section>
+
         </article>
     </main>
-    <footer id="footer">
-        <p>Aurélien VILMINOT | 2020 ©</p>
+    <footer>
+        <p>Aurélien VILMINOT | Copyright © 2020 vilminot.fr - Tous droits réservés</p>
     </footer>
 </body>
 </html>

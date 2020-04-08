@@ -29,3 +29,17 @@ function autoWriting() {
     };
     new Typed('#autoText', options);
 }
+
+function displayLabel(label, input) {
+    if (input.value) {
+        $(label)
+            .animate({
+                opacity: '1'
+            },250);
+    } else {
+        $(label)
+            .animate({
+                opacity: '0'
+            },250);
+    }
+}

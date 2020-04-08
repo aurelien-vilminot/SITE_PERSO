@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 /*
 font-family: 'Baloo Thambi 2', cursive;
@@ -32,6 +32,10 @@ body {
 h1 {
     font-family: 'Baloo Thambi 2', cursive;
     font-size: 5vw;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 a, a:visited, a:link, a:hover, a:active {
@@ -97,13 +101,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 9.89%;
+    margin-top: 20vh;
 }
 
 hr {
     border-top: 0.4vw solid #6A93CA;
     box-sizing: border-box;
-    width: 60%;
+    width: 60vw;
+    margin: 2vw 0;
 }
 
 footer {
@@ -111,5 +116,6 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1vw;
+    font-size: 1vw;
 }
 

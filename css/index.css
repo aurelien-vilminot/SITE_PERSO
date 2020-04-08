@@ -7,7 +7,7 @@
     background: #6A93CA;
     margin-bottom: 3vw;
     width: 100%;
-    height: 80.1vh;
+    height: 80vh;
 }
 
 #top img, #textTop {
@@ -21,9 +21,119 @@
     border-radius: 0.8vw;
 }
 
-#main {
+#about, #location, #classes {
     display: flex;
     flex-direction: column;
+}
+
+#location, #classes {
+    width: 30vw;
+}
+
+#about section {
+    justify-content: center;
     align-items: center;
+    width: 60vw;
+}
+
+#location p {
+    margin-top: 2vw;
+    text-align: justify;
+}
+
+#location iframe {
+    height: 20vw;
+}
+
+#classes {
+    align-items: center;
+}
+
+#classes p {
+    text-align: center;
+}
+
+#classes img {
+    width: 4vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#projects {
+    display: flex;
+    align-items: center;
+}
+
+#contact, #contact div, #about section {
+    display: flex;
+}
+
+#contact div {
+    align-items: center;
+    margin-top: 2vw;
+}
+
+#contact section {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+#contact img {
+    width: 4vw;
+    margin-right: 1vw;
+}
+
+#contact a {
+    transition: 200ms;
+}
+
+#contact a:hover {
+    color: #6A93CA;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3vw;
+    width: 30vw;
+}
+
+input[type="text"], input[type="email"], textarea {
     width: 100%;
+    color: #6A93CA;
+    padding: 0.8vw;
+    border: 0.1vw none #ccc;
+    border-bottom-style: solid;
+    box-sizing: border-box;
+    margin-bottom: 1.5vw;
+    resize: vertical;
+    font-size: 0.9vw;
+    font-family: 'Nunito', sans-serif;
+}
+
+label {
+    width: 100%;
+    font-size: 1vw;
+    opacity: 0;
+}
+
+input[type="submit"] {
+    background-color: #6A93CA;
+    text-decoration: none;
+    color: white;
+    padding: 0.6vw 1.5vw;
+    margin-left: 65%;
+    margin-top: 1vw;
+    border: none;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    font-size: 1.4vw;
+    transition: 300ms;
+}
+
+input[type="submit"]:hover {
+    background-color: black;
 }
