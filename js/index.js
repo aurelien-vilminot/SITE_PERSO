@@ -13,8 +13,9 @@
 }) ();
 
 function slowScroll(where) {
+    let location = $(where).offset().top - $('header').height();
     $('html, body').animate({
-        scrollTop: $(where).offset().top}, 1000);
+        scrollTop: location }, 1000);
 }
 
 function autoWriting() {

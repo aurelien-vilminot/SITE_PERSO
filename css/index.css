@@ -21,7 +21,7 @@
     border-radius: 0.8vw;
 }
 
-#about, #location, #classes {
+#about, #location, #classes, #company, #contentCompany div, #sports {
     display: flex;
     flex-direction: column;
 }
@@ -34,6 +34,7 @@
     justify-content: center;
     align-items: center;
     width: 60vw;
+    margin-bottom: 2vw;
 }
 
 #location p {
@@ -41,11 +42,15 @@
     text-align: justify;
 }
 
+#location p, #company p, #company li {
+    font-size: 1.2vw;
+}
+
 #location iframe {
     height: 20vw;
 }
 
-#classes {
+#classes, #contentCompany div {
     align-items: center;
 }
 
@@ -59,12 +64,71 @@
     margin-bottom: 1vw;
 }
 
+#company img {
+    width: 25vw;
+    border: #6A93CA solid 0.1vw;
+    border-radius: 0.5vw;
+}
+
+#logo_recrutonsensemble {
+    margin-bottom: 1vw;
+    padding: 1vw;
+}
+
+#contentCompany {
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+}
+
+#contentCompany div, #contentCompany p {
+    width: 28vw;
+}
+
+#contentCompany a {
+    font-weight: bold;
+}
+
+#contentCompany a:hover {
+    color: #6A93CA;
+}
+
+#contentCompany p {
+    text-align: justify;
+}
+
+#contentCompany ul {
+    flex-direction: column;
+    margin-top: 1vw;
+    margin-left: 7vw;
+    list-style-type: disc;
+}
+
+#sports img {
+    width: 20vw;
+    border-radius: 0.8vw;
+}
+
+.puzzle_picture div {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2vw;
+}
+
+#sports p {
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+}
+
+.puzzle_picture {
+    flex-direction: row;
+}
 #projects {
     display: flex;
     align-items: center;
 }
 
-#contact, #contact div, #about section {
+#contact, #contact div, #about section, #contentCompany, #sports div {
     display: flex;
 }
 
