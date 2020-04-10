@@ -7,6 +7,7 @@
     <title>Aurélien VILMINOT | Accueil</title>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/forms.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <link rel="icon" type="image/png" href="files/img/favicon.png"/>
     <link rel="stylesheet" id="style" href="css/index.css">
@@ -131,15 +132,16 @@
             </section>
             <section>
                 <h2>Me contacter</h2>
-                <form>
+                <form id="form_message" action="php/mail.php" method="post" enctype="multipart/form-data">
                     <label id="lastname">Nom</label>
-                    <input type="text" name="lastname" placeholder="Nom" oninput="displayLabel('#' + this.name, this)">
+                    <input type="text" name="lastname" placeholder="Nom" oninput="displayLabel('#' + this.name, this)" required>
                     <label id="firstname">Prénom</label>
-                    <input type="text" name="firstname" placeholder="Prénom" oninput="displayLabel('#' + this.name, this)">
+                    <input type="text" name="firstname" placeholder="Prénom" oninput="displayLabel('#' + this.name, this)" required>
                     <label id="mail">Adresse e-mail</label>
-                    <input type="email" name="mail" placeholder="Adresse e-mail" oninput="displayLabel('#' + this.name, this)">
+                    <input type="email" name="mail" placeholder="Adresse e-mail" oninput="displayLabel('#' + this.name, this)" required>
                     <label id="message">Message</label>
-                    <textarea name="message" placeholder="Message" oninput="displayLabel('#' + this.name, this)"></textarea>
+                    <textarea name="message" placeholder="Message" oninput="displayLabel('#' + this.name, this)" required></textarea>
+                    <div class="fail" id="fail_message"></div>
                     <input type="submit" name="submit" value="Envoyer">
                 </form>
             </section>

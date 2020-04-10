@@ -111,6 +111,13 @@ hr {
     margin: 2vw 0;
 }
 
+.fail {
+    display: none;
+    text-align: center;
+    font-size: 1.5vw;
+    color: #EE5340;
+}
+
 footer {
     display: flex;
     flex-direction: column;

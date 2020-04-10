@@ -9,14 +9,9 @@
             }
         });
         autoWriting();
+        forms('#form_message', '#fail_message');
     })
 }) ();
-
-function slowScroll(where) {
-    let location = $(where).offset().top - $('header').height();
-    $('html, body').animate({
-        scrollTop: location }, 1000);
-}
 
 function autoWriting() {
     let options = {
@@ -29,6 +24,12 @@ function autoWriting() {
         loop: true
     };
     new Typed('#autoText', options);
+}
+
+function slowScroll(where) {
+    let location = $(where).offset().top - $('header').height();
+    $('html, body').animate({
+        scrollTop: location }, 1000);
 }
 
 function displayLabel(label, input) {
