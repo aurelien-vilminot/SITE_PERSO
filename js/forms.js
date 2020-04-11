@@ -21,8 +21,8 @@ function successMessageFunction(nameForm, data) {
     return $(nameForm).parent()
         .empty()
         .append(
-            $('<h2>Me contacter</h2>'),
-            $('<p>' + data.successMessage + '</p>')
+            $('<h2/>').html('Me contacter'),
+            $('<p/>').html(data.successMessage)
                 .fadeIn()
                 .css({
                     display: 'flex',

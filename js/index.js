@@ -10,6 +10,7 @@
         });
         autoWriting();
         forms('#form_message', '#fail_message');
+        displayProjects(0);
     })
 }) ();
 

@@ -89,7 +89,7 @@
     font-weight: bold;
 }
 
-#contentCompany a:hover {
+#contentCompany a:hover, #list_projects a:hover {
     color: #6A93CA;
 }
 
@@ -125,10 +125,16 @@
 }
 #projects {
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-#contact, #contact div, #about section, #contentCompany, #sports div {
+#list_projects {
+    width: 60vw;
+    justify-content: space-around;
+}
+
+#contact, #contact div, #about section, #contentCompany, #sports div, #list_projects {
     display: flex;
 }
 
