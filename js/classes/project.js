@@ -5,6 +5,7 @@ class Project {
         this.link = projects[i][2];
         this.shortDescription = projects[i][3];
         this.description = projects[i][4];
+        this.languages = projects[i][5].split(',');
     }
 
     getID() {
@@ -27,24 +28,21 @@ class Project {
         return this.description;
     }
 
+    getLanguages() {
+        return this.languages;
+    }
+
     show(div) {
         let self = this;
         $(div)
             .append(
-                $('<div/>')
+                $('<div class="divProject"/>')
                     .css({
-                        display: 'flex',
-                        'flex-direction' : 'column',
-                        'align-items': 'center',
-                        'text-align': 'center',
-                        'box-shadow': '0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)',
-                        'border-radius': '1vw',
-                        width: '27vw',
-                        padding: '1vw'
+                        width: '27vw'
                     })
                     .append(
                         $('<h3/>').html(self.title),
-                        $('<img src="../../files/img_projects/' + self.id + '.png" alt="Ilustration Projet"/>')
+                        $('<img src="../../files/img_projects/' + self.id + '.png" alt="Illustration Projet"/>')
                             .css({
                                 width: '20vw',
                                 'margin-bottom': '1vw'
@@ -58,15 +56,129 @@ class Project {
                                 height: '100%'
                             })
                             .append(
-                                $('<a href=""/>')
+                                $('<a/>')
                                     .css({
+                                        cursor: 'pointer',
                                         'margin-top': '1vw',
                                         'font-size': '1.3vw',
                                         'font-weight': 'bold'
                                     })
                                     .html('En savoir plus')
+                                    .on('click', () => self.bigShow())
                             )
                     )
             )
+    }
+
+    bigShow() {
+        console.log(this.languages);
+        let self = this;
+        $('main')
+            .append(
+                $('<div id="mainProject"/>')
+                    .css({
+                        display: 'flex',
+                        'justify-content': 'center',
+                        'align-items': 'center',
+                        background: 'rgba(0,0,0,0.8)',
+                        position: 'fixed',
+                        width: '100vw',
+                        height: '100%',
+                        top: '0'
+                    })
+                    .append(
+                        $('<div class="divProject"/>')
+                            .css({
+                                'margin-top': '0',
+                                width: '60vw',
+                                background: 'white'
+                            })
+                            .append(
+                                $('<div/>')
+                                    .html('&times;')
+                                    .css({
+                                        display: 'flex',
+                                        'justify-content': 'flex-end',
+                                        width: '100%',
+                                        'margin-right': '1vw',
+                                        cursor: 'pointer'
+                                    })
+                                    .on('click', () => {
+                                        $('#mainProject').remove()
+                                    }),
+                                $('<h2/>')
+                                    .html(self.title)
+                                    .css({
+                                        'margin-top': '0'
+                                    }),
+                                $('<div/>')
+                                    .css({
+                                        display: 'flex',
+                                        'justify-content': 'space-between',
+                                        'align-items': 'center',
+                                        width: '90%'
+                                    })
+                                    .append(
+                                        $('<img src="../../files/img_projects/' + self.id + '.png" alt="Illustration Projet"/>')
+                                            .css({
+                                                width: '24vw'
+                                            }),
+                                        $('<div/>')
+                                            .css({
+                                                display: 'flex',
+                                                'flex-direction': 'column',
+                                                'justify-content': 'center',
+                                                'align-items': 'center',
+                                                width: '24vw'
+                                            })
+                                            .append(
+                                                $('<p/>')
+                                                    .html(self.description)
+                                                    .css({
+                                                        'margin-bottom': '2vw',
+                                                        'font-size': '1.2vw',
+                                                        'text-align': 'justify'
+                                                    }),
+                                                $('<div/>')
+                                                    .css({
+                                                        display: 'flex',
+                                                        'justify-content': 'center',
+                                                        'align-items': 'center',
+                                                    })
+                                                    .append(
+                                                        $('<p/>').html('Ressources :&nbsp;'),
+                                                        $('<a href="' + self.link + '" target="_blank"/>')
+                                                            .html('Github')
+                                                            .css({
+                                                                'font-style': 'italic'
+                                                            })
+                                                    ),
+                                                $('<hr id="hrProject"/>'),
+                                                $('<div id="projectLanguages"/>')
+                                                    .css({
+                                                        display: 'flex',
+                                                        'justify-content': 'space-around',
+                                                        'align-items': 'center',
+                                                        width: '100%'
+                                                    })
+                                            )
+                                    )
+                            )
+                    )
+            );
+        this.projectLanguage();
+    }
+
+    projectLanguage() {
+        let self = this;
+        for (let language in this.languages) {
+            $('#projectLanguages').append(
+                $('<img src="../../files/ic_languages/' + self.languages[language].toLowerCase() + '.png"/>')
+                    .css({
+                        'min-width': '2vw',
+                        'max-height': '3vw'
+                    })
+            )
+        }
     }
 }
