@@ -1,6 +1,6 @@
 class Project {
-    constructor(projects, i) {
-        this.id = i;
+    constructor(projects, idFirstProject, i) {
+        this.id = idFirstProject;
         this.title = projects[i][1];
         this.link = projects[i][2];
         this.shortDescription = projects[i][3];
@@ -71,8 +71,8 @@ class Project {
     }
 
     bigShow() {
-        console.log(this.languages);
         let self = this;
+        this.disableScroll();
         $('main')
             .append(
                 $('<div id="mainProject"/>')
@@ -90,22 +90,29 @@ class Project {
                         $('<div class="divProject"/>')
                             .css({
                                 'margin-top': '0',
+                                'padding-bottom': '2vw',
                                 width: '60vw',
                                 background: 'white'
                             })
                             .append(
                                 $('<div/>')
-                                    .html('&times;')
                                     .css({
                                         display: 'flex',
                                         'justify-content': 'flex-end',
                                         width: '100%',
                                         'margin-right': '1vw',
-                                        cursor: 'pointer'
                                     })
-                                    .on('click', () => {
-                                        $('#mainProject').remove()
-                                    }),
+                                    .append(
+                                        $('<a/>')
+                                            .html('&times;')
+                                            .css({
+                                                cursor: 'pointer'
+                                            })
+                                            .on('click', () => {
+                                                self.enableScroll();
+                                                $('#mainProject').remove()
+                                            }),
+                                    ),
                                 $('<h2/>')
                                     .html(self.title)
                                     .css({
@@ -173,12 +180,24 @@ class Project {
         let self = this;
         for (let language in this.languages) {
             $('#projectLanguages').append(
-                $('<img src="../../files/ic_languages/' + self.languages[language].toLowerCase() + '.png"/>')
+                $('<img src="../../files/ic_languages/' + self.languages[language].toLowerCase() + '.png" alt="Logo langage" title="' + self.languages[language] + '"/>')
                     .css({
                         'min-width': '2vw',
                         'max-height': '3vw'
                     })
             )
         }
+    }
+
+    disableScroll() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+    }
+
+    enableScroll() {
+        window.onscroll = function() {};
     }
 }

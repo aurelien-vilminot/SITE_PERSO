@@ -8,4 +8,10 @@ class Project extends Database {
         $req = $this->executeRequete($sql, $tab);
         return $req->fetchAll();
     }
+
+    public function getNbProjects() {
+        $sql = 'SELECT COUNT(*) FROM PROJECTS';
+        $req = $this->executeRequete($sql);
+        return $req->fetchAll();
+    }
 }

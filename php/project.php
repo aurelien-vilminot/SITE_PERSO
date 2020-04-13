@@ -3,10 +3,15 @@ session_start();
 require_once '../model/project.php';
 
 $obj = new stdClass();
-
 $myProjects = new Project();
 
-$obj->projects = $myProjects->getProjects(1,2);
+if (isset($_GET['requestType']) && $_GET['requestType'] == 'nbProjects') {
+    $nbProjects = $myProjects->getNbProjects();
+    $obj->nbPages = ceil($nbProjects[0][0]/2);
+} else {
+    $idFirstProject = $_GET['idFirstProject'];
+    $obj->projects = $myProjects->getProjects($idFirstProject + 1,$idFirstProject + 2);
+}
 
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
