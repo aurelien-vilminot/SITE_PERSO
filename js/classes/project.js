@@ -38,22 +38,24 @@ class Project {
             .append(
                 $('<div class="divProject"/>')
                     .css({
-                        width: '27vw'
+                        width: '27vw',
+                        height: '30vw'
                     })
                     .append(
                         $('<h3/>').html(self.title),
-                        $('<img src="../../files/img_projects/' + self.id + '.png" alt="Illustration Projet"/>')
+                        $('<img src="../../files/img_projects/' + self.id + '_1.png" alt="Illustration Projet"/>')
                             .css({
-                                width: '20vw',
-                                'margin-bottom': '1vw'
+                                'max-width': '25vw',
+                                'max-height': '15vw',
+                                'margin-bottom': '1vw',
+                                border: '0.2vw solid #6A93CA'
                             }),
                         $('<p/>').html(self.shortDescription),
                         $('<div/>')
                             .css({
                                 display: 'flex',
                                 'align-items': 'flex-end',
-                                'justify-content': 'center',
-                                height: '100%'
+                                'justify-content': 'center'
                             })
                             .append(
                                 $('<a/>')
@@ -126,9 +128,13 @@ class Project {
                                         width: '90%'
                                     })
                                     .append(
-                                        $('<img src="../../files/img_projects/' + self.id + '.png" alt="Illustration Projet"/>')
+                                        $('<div id="imgs_project"/>')
                                             .css({
-                                                width: '24vw'
+                                                display: 'flex',
+                                                'flex-direction': 'column',
+                                                'justify-content': 'center',
+                                                'align-items': 'center',
+                                                width: '28vw'
                                             }),
                                         $('<div/>')
                                             .css({
@@ -153,9 +159,7 @@ class Project {
                                                         'align-items': 'center',
                                                     })
                                                     .append(
-                                                        $('<p/>').html('Ressources :&nbsp;'),
-                                                        $('<a href="' + self.link + '" target="_blank"/>')
-                                                            .html('Github')
+                                                        $('<p/>').html('Ressources :&nbsp;' + self.link)
                                                             .css({
                                                                 'font-style': 'italic'
                                                             })
@@ -173,6 +177,19 @@ class Project {
                             )
                     )
             );
+        for (let i = 1 ; i < 3 ; ++i) {
+            $('#imgs_project')
+                .append(
+                    $('<img src="../../files/img_projects/' + self.id + '_' + i + '.png" alt="Illustration Projet"/>')
+                        .css({
+                            'max-height': '15vw',
+                            'max-width': '28vw',
+                            'margin-right': '1.5vw',
+                            'margin-bottom': '1vw',
+                            border: '0.2vw solid #6A93CA'
+                        })
+                )
+        }
         this.projectLanguage();
     }
 
