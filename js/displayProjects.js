@@ -8,7 +8,6 @@ function displayProjects() {
         let currentPage = 1;
         changePage(currentPage, nbPages);
     }).fail(() => customFail());
-
 }
 
 function changePage(currentPage, nbPages) {
