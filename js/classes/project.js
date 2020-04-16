@@ -48,9 +48,13 @@ class Project {
                                 'max-width': '25vw',
                                 'max-height': '15vw',
                                 'margin-bottom': '1vw',
-                                border: '0.2vw solid #6A93CA'
+                                border: '0.1vw solid #212322'
                             }),
-                        $('<p/>').html(self.shortDescription),
+                        $('<p/>')
+                            .html(self.shortDescription)
+                            .css({
+                                'font-size': '1.3vw'
+                            }),
                         $('<div/>')
                             .css({
                                 display: 'flex',
@@ -149,8 +153,8 @@ class Project {
                                                     .html(self.description)
                                                     .css({
                                                         'margin-bottom': '2vw',
-                                                        'font-size': '1.2vw',
-                                                        'text-align': 'justify'
+                                                        'font-size': '1vw',
+                                                        'text-align': 'initial'
                                                     }),
                                                 $('<div/>')
                                                     .css({
@@ -186,7 +190,7 @@ class Project {
                             'max-width': '28vw',
                             'margin-right': '1.5vw',
                             'margin-bottom': '1vw',
-                            border: '0.2vw solid #6A93CA'
+                            border: '0.1vw solid #212322'
                         })
                 )
         }

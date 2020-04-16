@@ -10,7 +10,9 @@ if (isset($_GET['requestType']) && $_GET['requestType'] == 'nbProjects') {
     $obj->nbPages = ceil($nbProjects[0][0]/2);
 } else {
     $idFirstProject = $_GET['idFirstProject'];
-    $obj->projects = $myProjects->getProjects($idFirstProject + 1,$idFirstProject + 2);
+    $result = $myProjects->getProjects($idFirstProject + 1,$idFirstProject + 2);
+    $obj->projects = $result[0];
+    $obj->nbProjects = $result[1];
 }
 
 header('Cache-Control: no-cache, must-revalidate');

@@ -102,7 +102,7 @@ function getProjectsOfPage(idFirstProject) {
             .empty()
             .hide()
             .fadeIn(350);
-        for (let i = 0 ; i < 2 ; ++i) {
+        for (let i = 0 ; i < data.nbProjects ; ++i) {
             idFirstProject += 1;
             let project = new Project(data.projects, idFirstProject, i);
             project.show('#list_projects');

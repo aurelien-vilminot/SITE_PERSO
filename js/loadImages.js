@@ -1,4 +1,4 @@
-function preloadImages(array) {
+function preloadImages(array, path) {
     if (!preloadImages.list) {
         preloadImages.list = [];
     }
@@ -12,18 +12,17 @@ function preloadImages(array) {
             }
         };
         list.push(img);
-        img.src = array[i];
+        img.src = path + array[i];
     }
 }
 
-function testPreload() {
+function preloadInit() {
     $.ajax({
         url: '../php/parseDisk.php',
-        method: 'post'
+        method: 'get'
     }).done((data) => {
-        console.log(data.tabImgProject);
-        console.log(data.tabImg);
-        console.log(data.tabIc);
-        preloadImages(data.tabIc);
+        preloadImages(data.tabIc, '../files/ic_languages/');
+        preloadImages(data.tabImg, '../files/img/');
+        preloadImages(data.tabImgProject, '../files/img_projects/');
     }).fail(() => customFail());
 }
