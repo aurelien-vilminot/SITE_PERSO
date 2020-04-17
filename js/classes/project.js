@@ -59,7 +59,8 @@ class Project {
                             .css({
                                 display: 'flex',
                                 'align-items': 'flex-end',
-                                'justify-content': 'center'
+                                'justify-content': 'center',
+                                height: '20%'
                             })
                             .append(
                                 $('<a/>')
