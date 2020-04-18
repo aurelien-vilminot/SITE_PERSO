@@ -9,10 +9,10 @@ $myMail = new Mail();
 
 if(!empty(trim($_POST['lastname'])) && !empty(trim($_POST['firstname'])) && !empty(trim($_POST['mail'])) && !empty(trim($_POST['message'])))
 {
-    $lastname = trim($_POST['lastname']);
-    $firstname = trim($_POST['firstname']);
-    $mail = trim($_POST['mail']);
-    $message = trim($_POST['message']);
+    $lastname = strval(trim($_POST['lastname']));
+    $firstname = strval(trim($_POST['firstname']));
+    $mail = strval(trim($_POST['mail']));
+    $message = strval(trim($_POST['message']));
 
     if (!preg_match('/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.\'-]+$/', $lastname)) {
         $obj->error = 'Le nom ne peut être composé de caractères spéciaux ou chiffres';

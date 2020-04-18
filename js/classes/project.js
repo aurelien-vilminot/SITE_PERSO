@@ -46,33 +46,24 @@ class Project {
                         $('<img src="../../files/img_projects/' + self.id + '_1.png" alt="Illustration Projet"/>')
                             .css({
                                 'max-width': '25vw',
-                                'max-height': '15vw',
+                                'max-height': '31%',
                                 'margin-bottom': '1vw',
                                 border: '0.1vw solid #212322'
                             }),
                         $('<p/>')
                             .html(self.shortDescription)
                             .css({
-                                'font-size': '1.3vw'
+                                'font-size': '1.3vw',
+                                height : '38%'
                             }),
-                        $('<div/>')
+                        $('<a/>')
                             .css({
-                                display: 'flex',
-                                'align-items': 'flex-end',
-                                'justify-content': 'center',
-                                height: '20%'
+                                cursor: 'pointer',
+                                'font-size': '1.3vw',
+                                'font-weight': 'bold'
                             })
-                            .append(
-                                $('<a/>')
-                                    .css({
-                                        cursor: 'pointer',
-                                        'margin-top': '1vw',
-                                        'font-size': '1.3vw',
-                                        'font-weight': 'bold'
-                                    })
-                                    .html('En savoir plus')
-                                    .on('click', () => self.bigShow())
-                            )
+                            .html('En savoir plus')
+                            .on('click', () => self.bigShow())
                     )
             )
     }

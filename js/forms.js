@@ -6,6 +6,10 @@ function forms(nameForm, failMessage) {
             data: $(this).serialize()
         }).done((data) => {
             if (data.success) {
+                $('#findMe')
+                    .css({
+                        'margin-bottom': '2vw'
+                    })
                 successMessageFunction(nameForm, data);
             } else {
                 $(failMessage)
