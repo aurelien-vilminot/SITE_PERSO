@@ -14,6 +14,9 @@ function forms(nameForm, failMessage) {
             } else {
                 $(failMessage)
                     .html(data.error)
+                    .css({
+                        'margin-bottom': '1vw'
+                    })
                     .fadeIn()
             }
         }).fail(() => customFail());
