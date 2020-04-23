@@ -6,18 +6,19 @@
     justify-content: space-around;
     background: #6A93CA;
     margin-bottom: 3vw;
-    width: 100%;
     height: 80vh;
+
 }
 
-#top img, #textTop {
-    width: 50vw;
+#top div {
+    width: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 #top img {
-    width: 24%;
+    width: 45%;
     border-radius: 0.8vw;
 }
 
