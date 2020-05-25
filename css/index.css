@@ -1,4 +1,5 @@
-@import "general.css";
+@import "global.css";
+@import "global_media_query.css";
 
 #top {
     display: flex;
@@ -63,6 +64,10 @@
     width: 4vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
+}
+
+p i {
+    font-size: 0.8vw
 }
 
 #company img {
@@ -226,3 +231,104 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: black;
 }
+
+@media only screen and (max-width: 960px) {
+    #top {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #top div {
+        width: 87%;
+        height: 40vh;
+    }
+
+    #top img {
+        width: auto;
+        height: 100%;
+    }
+
+    #contact, #contact div, #about section, #contentCompany, #sports div, #list_projects {
+        flex-direction: column;
+        align-items: center;
+        width: 89%;
+    }
+
+    #about, #location, #classes, #company, #contentCompany div, #sports {
+        align-items: center;
+    }
+
+    #location, #classes {
+        width: auto;
+    }
+
+    #location iframe {
+        height: 70vw;
+    }
+
+    #location p, #company p, #company li {
+        font-size: initial;
+    }
+
+    #classes img {
+        width: 11vw;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    p i {
+        font-size: 3.5vw;
+    }
+
+    #contentCompany div, #contentCompany p {
+        width: auto;
+    }
+
+    #company img {
+        width: 60vw;
+    }
+
+    #contact section {
+        width: auto;
+        align-items: center;
+    }
+
+    #contact div {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #contact img {
+        width: 10vw;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    label {
+        font-size: 4vw;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 3.9vw;
+    }
+
+    input[type="submit"] {
+        font-size: 5vw;
+        border-radius: 1.5vw;
+        padding: 2.6vw 3.5vw;
+    }
+
+    #g-recaptcha {
+        transform: scale(0.7);
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    #top img {
+        height: auto;
+    }
+}
+

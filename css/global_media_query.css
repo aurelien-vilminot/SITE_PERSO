@@ -1,0 +1,14 @@
+@media only screen and (max-width: 960px) {
+
+    body {
+        font-size: 5vw;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    footer {
+        font-size: 2.5vw;
+    }
+}

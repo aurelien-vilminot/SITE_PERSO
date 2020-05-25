@@ -9,8 +9,5 @@ define('SQL_BASE', '');
 define('MY_MAIL', 'aurelien@vilminot.fr');
 
 /* Captchat keys */
-
-/* Captchat keys */
-
 define('CLIENT_KEY', '');
 define('SERVER_KEY', '');

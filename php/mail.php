@@ -19,7 +19,6 @@ $api_url = "https://www.google.com/recaptcha/api/siteverify?secret="
     . "&remoteip=" . $remoteip ;
 
 $decode = json_decode(file_get_contents($api_url), true);
-$obj->json = $decode;
 
 if ($decode['success'] == true) {
     if(!empty(trim($_POST['lastname'])) && !empty(trim($_POST['firstname'])) && !empty(trim($_POST['mail'])) && !empty(trim($_POST['message']))) {
