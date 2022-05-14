@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/viau8608/citest.vilminot.fr/
-    - /bin/cp -r * $DEPLOYPATH #copy all recursively to $DEPLOYPATH
+    - export DEPLOYPATH=/home/viau8608/public_html/
+    - /bin/cp -r * $DEPLOYPATH    #copy all recursively to $DEPLOYPATH
