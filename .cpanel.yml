@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/viau8608/citest.vilminot.fr/
+    - /bin/cp -R ./* $DEPLOYPATH
