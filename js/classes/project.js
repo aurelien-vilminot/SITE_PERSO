@@ -54,7 +54,7 @@ class Project {
                             .html(self.shortDescription)
                             .css({
                                 'font-size': '1.3vw',
-                                height : '38%'
+                                height: '38%'
                             }),
                         $('<a/>')
                             .css({
@@ -65,7 +65,7 @@ class Project {
                             .html('En savoir plus')
                             .on('click', () => self.bigShow())
                     )
-            )
+            );
     }
 
     bigShow() {
@@ -98,7 +98,7 @@ class Project {
                                         display: 'flex',
                                         'justify-content': 'flex-end',
                                         width: '100%',
-                                        'margin-right': '1vw',
+                                        'margin-right': '1vw'
                                     })
                                     .append(
                                         $('<a/>')
@@ -108,8 +108,8 @@ class Project {
                                             })
                                             .on('click', () => {
                                                 self.enableScroll();
-                                                $('#mainProject').remove()
-                                            }),
+                                                $('#mainProject').remove();
+                                            })
                                     ),
                                 $('<h2/>')
                                     .html(self.title)
@@ -152,7 +152,7 @@ class Project {
                                                     .css({
                                                         display: 'flex',
                                                         'justify-content': 'center',
-                                                        'align-items': 'center',
+                                                        'align-items': 'center'
                                                     })
                                                     .append(
                                                         $('<p/>').html('Ressources :&nbsp;' + self.link)
@@ -173,7 +173,7 @@ class Project {
                             )
                     )
             );
-        for (let i = 1 ; i < 3 ; ++i) {
+        for (let i = 1; i < 3; ++i) {
             $('#imgs_project')
                 .append(
                     $('<img src="../../files/img_projects/' + self.id + '_' + i + '.png" alt="Illustration Projet"/>')
@@ -184,7 +184,7 @@ class Project {
                             'margin-bottom': '1vw',
                             border: '0.1vw solid #212322'
                         })
-                )
+                );
         }
         this.projectLanguage();
     }
@@ -198,7 +198,7 @@ class Project {
                         'min-width': '2vw',
                         'max-height': '3vw'
                     })
-            )
+            );
         }
     }
 
@@ -211,6 +211,7 @@ class Project {
     }
 
     enableScroll() {
-        window.onscroll = function() {};
+        window.onscroll = function() {
+        };
     }
 }

@@ -1,172 +1,180 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang='fr'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Aurélien VILMINOT - Portfolio : présentation de mon parcours et de mes différents projets"/>
-    <meta name="google-site-verification" content="f1LfSr6kbfVeKvMoa28Wvl9_IA1vqDFWuSqVsOWaUPE" />
-    <title>Aurélien VILMINOT</title>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/forms.js"></script>
-    <script src="js/displayProjects.js"></script>
-    <script src="js/fail.js"></script>
-    <script src="js/classes/project.js"></script>
-    <script src="js/loadImages.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <link rel="icon" type="image/png" href="files/img/favicon.png"/>
-    <link rel="stylesheet" id="style" href="css/index.css">
+	<meta charset='UTF-8'>
+	<meta name='description'
+		  content='Aurélien VILMINOT - Portfolio : présentation de mon parcours et de mes différents projets' />
+	<meta name='google-site-verification' content='f1LfSr6kbfVeKvMoa28Wvl9_IA1vqDFWuSqVsOWaUPE' />
+	<title>Aurélien VILMINOT</title>
+	<script src='js/jquery-3.4.1.min.js'></script>
+	<script src='js/index.js'></script>
+	<script src='js/forms.js'></script>
+	<script src='js/displayProjects.js'></script>
+	<script src='js/fail.js'></script>
+	<script src='js/classes/project.js'></script>
+	<script src='js/loadImages.js'></script>
+	<script src='https://cdn.jsdelivr.net/npm/typed.js@2.0.11'></script>
+	<script src='https://www.google.com/recaptcha/api.js' async defer></script>
+	<link rel='icon' type='image/png' href='files/img/favicon.png' />
+	<link rel='stylesheet' id='style' href='css/index.css'>
 </head>
 <body>
-    <header>
-        <img src="files/img/logo.png" alt="Logo Principal">
-        <nav class="menu">
-            <ul>
-                <li><a onclick="slowScroll('body')">Accueil</a></li>
-                <li><a onclick="slowScroll('#about')">À propos</a></li>
-                <li><a onclick="slowScroll('#projects')">Projets</a></li>
-                <li><a onclick="slowScroll('#contact')">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article id="top">
-            <div>
-                <img src="files/img/profil.jpg" alt="Photo de profil">
-            </div>
-            <div id="textTop">
-                <h1 id="autoText"></h1>
-            </div>
-        </article>
-        <article id="about">
-            <section>
-                <div id="location">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92360.23927459145!2d5.17924606089783!3d43.66361466889698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9f7cbcbe71c0d%3A0xc82a7405822cc2c8!2s13410%20Lambesc!5e0!3m2!1sfr!2sfr!4v1586379322397!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    <p>Jeune citoyen de la commune de Lambesc, je suis à la fois dynamique et curieux de nature. <br/>
-                        Étudiant en 2<sup>ème</sup> année à Grenoble INP - Ensimag,
-                        j’envisage, à la suite de mes études, de travailler dans le développement logiciel ou dans la cybersécurité.</p>
-                </div>
+<header>
+	<img src='files/img/logo.png' alt='Logo Principal'>
+	<nav class='menu'>
+		<ul>
+			<li><a onclick="slowScroll('body')">Accueil</a></li>
+			<li><a onclick="slowScroll('#about')">À propos</a></li>
+			<li><a onclick="slowScroll('#projects')">Projets</a></li>
+			<li><a onclick="slowScroll('#contact')">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<article id='top'>
+		<div>
+			<img src='files/img/profil.png' alt='Photo de profil'>
+		</div>
+		<div id='textTop'>
+			<h1 id='autoText'></h1>
+		</div>
+	</article>
+	<article id='about'>
+		<section>
+			<div id='location'>
+				<iframe
+					src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92360.23927459145!2d5.17924606089783!3d43.66361466889698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9f7cbcbe71c0d%3A0xc82a7405822cc2c8!2s13410%20Lambesc!5e0!3m2!1sfr!2sfr!4v1586379322397!5m2!1sfr!2sfr'
+					style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>
+				<p>Jeune citoyen de la commune de Lambesc, je suis à la fois dynamique et curieux de nature. <br />
+					Étudiant en 2<sup>ème</sup> année à Grenoble INP - Ensimag,
+					j’envisage, à la suite de mes études, de travailler dans le développement logiciel tout en me
+					spécialisant dans la cybersécurité.</p>
+			</div>
 
-                <div id="classes">
-                    <h2>Formations</h2>
-                    <p>
-                        Grenoble INP - Ensimag<br/>
-                        <i>
-                            Spécialité : Ingénierie des Systèmes d'Information<br/>
-                        </i>
-                        2020 - 2023
-                    </p>
-                    <img src="files/img/arrow_up.png" alt="Flèche haut">
-                    <p>
-                        IUT Département Informatique<br/>
-                        <i>
-                            Major de promotion<br/>
-                        </i>
-                        2018 - 2020
-                    </p>
-                    <img src="files/img/arrow_up.png" alt="Flèche haut">
-                    <p>
-                        Lycée Adam de Craponne<br/>
-                        <i>
-                            Baccalauréat Scientifique Sciences de l'Ingénieur<br/>
-                            Option : Informatique et Sciences du Numérique<br/>
-                        </i>
-                        2015 - 2018
-                    </p>
+			<div id='classes'>
+				<h2>Formations</h2>
+				<p>
+					Grenoble INP - Ensimag<br />
+					<i>
+						Spécialité : Ingénierie des Systèmes d'Information<br />
+					</i>
+					2020 - 2023
+				</p>
+				<img src='files/img/arrow_up.png' alt='Flèche haut'>
+				<p>
+					IUT Département Informatique<br />
+					<i>
+						Major de promotion<br />
+					</i>
+					2018 - 2020
+				</p>
+				<img src='files/img/arrow_up.png' alt='Flèche haut'>
+				<p>
+					Lycée Adam de Craponne<br />
+					<i>
+						Baccalauréat Scientifique Sciences de l'Ingénieur<br />
+						Option : Informatique et Sciences du Numérique<br />
+					</i>
+					2015 - 2018
+				</p>
 
-                    <img src="files/img/arrow_up.png" alt="Flèche haut">
-                    <p>
-                        Collège Jean Guehenno<br/>
-                        2011 - 2015
-                    </p>
-                </div>
-            </section>
+				<img src='files/img/arrow_up.png' alt='Flèche haut'>
+				<p>
+					Collège Jean Guehenno<br />
+					2011 - 2015
+				</p>
+			</div>
+		</section>
 
-            <section id="company">
-                <h2>Auto-entrepreneur</h2>
-                <div id="contentCompany">
-                    <div>
-                        <img src="files/img/logo_recrutonsensemble.png" alt="Logo RecrutonsEnsemble" id="logo_recrutonsensemble">
-                        <img src="files/img/logo_3wrh.png" alt="Logo 3WRH">
-                    </div>
-                    <div>
-                        <p>
-                            Depuis janvier 2018, j'ai créé mon auto-entreprise afin de pouvoir travailler dans le secteur du recrutement. Je travaille
-                            actuellement pour <a href="https://recrutonsensemble.com/" target="_blank">RecrutonsEnsemble</a> et la <a href="http://3wrh.fr/" target="_blank">3WRH</a>.<br/>
-                            Mes activités principales sont :<br/>
-                        </p>
-                        <ul>
-                            <li>Recherche de candidats (sourcing)</li>
-                            <li>Veille permanente sur les réseaux</li>
-                            <li>Suivi du candidat durant le processus</li>
-                            <li>Analyse des besoins de l’entreprise en<br/> termes de recrutement</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+		<section id='company'>
+			<h2>Auto-entrepreneur</h2>
+			<div id='contentCompany'>
+				<div>
+					<img src='files/img/logo_recrutonsensemble.png' alt='Logo RecrutonsEnsemble'
+						 id='logo_recrutonsensemble'>
+					<img src='files/img/logo_3wrh.png' alt='Logo 3WRH'>
+				</div>
+				<div>
+					<p>
+						Depuis janvier 2018, j'ai créé mon auto-entreprise afin de pouvoir travailler dans le secteur du
+						recrutement. Je travaille
+						actuellement pour <a href='https://recrutonsensemble.com/' target='_blank'>RecrutonsEnsemble</a>
+						et la <a href='http://3wrh.fr/' target='_blank'>3WRH</a>.<br />
+						Mes activités principales sont :<br />
+					</p>
+					<ul>
+						<li>Recherche de candidats (sourcing)</li>
+						<li>Veille permanente sur les réseaux</li>
+						<li>Suivi du candidat durant le processus</li>
+						<li>Analyse des besoins de l’entreprise en<br /> termes de recrutement</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 
-            <section id="sports" style="margin-bottom: 0">
-                <h2>Sports</h2>
-                <div class="puzzle_picture">
-                    <div style="margin-right: 1.5vw; align-items: flex-end">
-                        <img src="files/img/clouds.JPG" alt="Nuages">
-                        <p>VTT</p>
-                        <img src="files/img/lac.JPG" alt="Lac">
-                    </div>
-                    <div>
-                        <p>Trail</p>
-                        <img src="files/img/bike.jpeg" alt="Vélo" style="width: 15vw">
-                        <p style="margin-bottom: 2.5vw">Randonnée</p>
-                    </div>
-                </div>
+		<section id='sports' style='margin-bottom: 0'>
+			<h2>Sports</h2>
+			<div class='puzzle_picture'>
+				<div style='margin-right: 1.5vw; align-items: flex-end'>
+					<img src='files/img/clouds.JPG' alt='Nuages'>
+					<p>VTT - Cyclisme</p>
+					<img src='files/img/lac.JPG' alt='Lac'>
+				</div>
+				<div>
+					<p>Trail</p>
+					<img src='files/img/bike.jpeg' alt='Vélo' style='width: 15vw'>
+					<p style='margin-bottom: 2.5vw'>Randonnée</p>
+				</div>
+			</div>
 
-            </section>
+		</section>
 
-        </article>
+	</article>
 
-        <hr>
+	<hr>
 
-        <article id="projects">
-            <h2>Projets</h2>
-            <div id="list_projects"></div>
-            <div id="change_page"></div>
-        </article>
+	<article id='projects'>
+		<h2>Projets</h2>
+		<div id='list_projects'></div>
+		<div id='change_page'></div>
+	</article>
 
-        <hr>
+	<hr>
 
-        <article id="contact">
-            <section id="findMe">
-                <h2>Me trouver</h2>
-                <div>
-                    <img src="files/img/ic_linkedin.png" alt="Logo Linkedin">
-                    <a href="https://www.linkedin.com/in/aur%C3%A9lien-vilminot/" target="_blank">Linkedin</a>
-                </div>
-                <div>
-                    <img src="files/img/ic_github.png" alt="Logo Github">
-                    <a href="https://github.com/aurelien-vilminot/" target="_blank">Github</a>
-                </div>
-            </section>
-            <section>
-                <h2>Me contacter</h2>
-                <form id="form_message" action="php/mail.php" method="post" enctype="multipart/form-data">
-                    <label id="lastname">Nom</label>
-                    <input type="text" name="lastname" id="lastnameInput" placeholder="Nom" oninput="displayLabel('#' + this.name, this)" required>
-                    <label id="firstname">Prénom</label>
-                    <input type="text" name="firstname" placeholder="Prénom" oninput="displayLabel('#' + this.name, this)" required>
-                    <label id="mail">Adresse e-mail</label>
-                    <input type="email" name="mail" placeholder="Adresse e-mail" oninput="displayLabel('#' + this.name, this)" required>
-                    <label id="message">Message</label>
-                    <textarea name="message" placeholder="Message" oninput="displayLabel('#' + this.name, this)"></textarea>
-                    <div class="fail" id="fail_message"></div>
-                    <div class="g-recaptcha" id="g-recaptcha" data-sitekey="6LfTpewUAAAAAF9sskqejedgoH0p9ggxvNgqxuNo"></div>
-                    <input type="submit" name="submit" value="Envoyer">
-                </form>
-            </section>
+	<article id='contact'>
+		<section id='findMe'>
+			<h2>Me trouver</h2>
+			<div>
+				<img src='files/img/ic_linkedin.png' alt='Logo Linkedin'>
+				<a href='https://www.linkedin.com/in/aur%C3%A9lien-vilminot/' target='_blank'>Linkedin</a>
+			</div>
+			<div>
+				<img src='files/img/ic_github.png' alt='Logo Github'>
+				<a href='https://github.com/aurelien-vilminot/' target='_blank'>Github</a>
+			</div>
+		</section>
+		<section>
+			<h2>Me contacter</h2>
+			<form id='form_message' action='php/mail.php' method='post' enctype='multipart/form-data'>
+				<label id='lastname'>Nom</label>
+				<input type='text' name='lastname' id='lastnameInput' placeholder='Nom'
+					   oninput="displayLabel('#' + this.name, this)" required>
+				<label id='firstname'>Prénom</label>
+				<input type='text' name='firstname' placeholder='Prénom' oninput="displayLabel('#' + this.name, this)"
+					   required>
+				<label id='mail'>Adresse e-mail</label>
+				<input type='email' name='mail' placeholder='Adresse e-mail'
+					   oninput="displayLabel('#' + this.name, this)" required>
+				<label id='message'>Message</label>
+				<textarea name='message' placeholder='Message' oninput="displayLabel('#' + this.name, this)"></textarea>
+				<div class='fail' id='fail_message'></div>
+				<div class='g-recaptcha' id='g-recaptcha' data-sitekey='6LfTpewUAAAAAF9sskqejedgoH0p9ggxvNgqxuNo'></div>
+				<input type='submit' name='submit' value='Envoyer'>
+			</form>
+		</section>
 
-        </article>
-    </main>
-    <footer>
-        <p>Aurélien VILMINOT | Copyright © 2021 vilminot.fr - Tous droits réservés</p>
-    </footer>
+	</article>
+</main>
+<footer></footer>
 </body>
 </html>

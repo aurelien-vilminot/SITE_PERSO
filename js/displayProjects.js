@@ -2,7 +2,7 @@ function displayProjects() {
     $.ajax({
         url: '../php/project.php',
         method: 'get',
-        data: {requestType: 'nbProjects'}
+        data: { requestType: 'nbProjects' }
     }).done((data) => {
         let nbPages = data.nbPages;
         let currentPage = 1;
@@ -22,16 +22,16 @@ function changePage(currentPage, nbPages) {
             .append(
                 $('<a/>')
                     .html('Suivant')
-                    .css({'margin-right': '0.5vw', cursor: 'pointer'})
+                    .css({ 'margin-right': '0.5vw', cursor: 'pointer' })
                     .on('click', () => {
                         currentPage += 1;
-                        changePage(currentPage, nbPages)
+                        changePage(currentPage, nbPages);
                     }),
                 $('<img src="../files/img/next_page.png" alt="Next icon"/>')
-                    .css({width: '1.5vw', cursor: 'pointer'})
+                    .css({ width: '1.5vw', cursor: 'pointer' })
                     .on('click', () => {
                         currentPage += 1;
-                        changePage(currentPage, nbPages)
+                        changePage(currentPage, nbPages);
                     })
             );
     } else if (currentPage === nbPages) {
@@ -41,18 +41,18 @@ function changePage(currentPage, nbPages) {
             .fadeIn(350)
             .append(
                 $('<img src="../files/img/prev_page.png" alt="Precédent icon"/>')
-                    .css({width: '1.5vw', cursor: 'pointer'})
+                    .css({ width: '1.5vw', cursor: 'pointer' })
                     .on('click', () => {
                         currentPage -= 1;
-                        changePage(currentPage, nbPages)
+                        changePage(currentPage, nbPages);
                     }),
                 $('<a/>')
                     .html('Précédent')
-                    .css({'margin-left': '0.5vw', cursor: 'pointer'})
+                    .css({ 'margin-left': '0.5vw', cursor: 'pointer' })
                     .on('click', () => {
                         currentPage -= 1;
-                        changePage(currentPage, nbPages)
-                    }),
+                        changePage(currentPage, nbPages);
+                    })
             );
     } else {
         $('#change_page')
@@ -61,32 +61,32 @@ function changePage(currentPage, nbPages) {
             .fadeIn(350)
             .append(
                 $('<img src="../files/img/prev_page.png" alt="Precédent icon"/>')
-                    .css({width: '1.5vw', cursor: 'pointer'})
+                    .css({ width: '1.5vw', cursor: 'pointer' })
                     .on('click', () => {
                         currentPage -= 1;
-                        changePage(currentPage, nbPages)
+                        changePage(currentPage, nbPages);
                     }),
                 $('<a/>')
                     .html('Précédent')
-                    .css({'margin-right': '0.5vw', 'margin-left': '0.5vw', cursor: 'pointer'})
+                    .css({ 'margin-right': '0.5vw', 'margin-left': '0.5vw', cursor: 'pointer' })
                     .on('click', () => {
                         currentPage -= 1;
-                        changePage(currentPage, nbPages)
+                        changePage(currentPage, nbPages);
                     }),
                 $('<p/>')
-                    .html ('|'),
+                    .html('|'),
                 $('<a/>')
                     .html('Suivant')
-                    .css({'margin-left': '0.5vw', 'margin-right': '0.5vw', cursor: 'pointer'})
+                    .css({ 'margin-left': '0.5vw', 'margin-right': '0.5vw', cursor: 'pointer' })
                     .on('click', () => {
                         currentPage += 1;
-                        changePage(currentPage, nbPages)
+                        changePage(currentPage, nbPages);
                     }),
                 $('<img src="../files/img/next_page.png" alt="Next icon"/>')
-                    .css({width: '1.5vw', cursor: 'pointer'})
+                    .css({ width: '1.5vw', cursor: 'pointer' })
                     .on('click', () => {
                         currentPage += 1;
-                        changePage(currentPage, nbPages)
+                        changePage(currentPage, nbPages);
                     })
             );
     }
@@ -96,13 +96,13 @@ function getProjectsOfPage(idFirstProject) {
     $.ajax({
         url: '../php/project.php',
         method: 'get',
-        data: {idFirstProject: idFirstProject}
+        data: { idFirstProject: idFirstProject }
     }).done((data) => {
         $('#list_projects')
             .empty()
             .hide()
             .fadeIn(350);
-        for (let i = 0 ; i < data.nbProjects ; ++i) {
+        for (let i = 0; i < data.nbProjects; ++i) {
             idFirstProject += 1;
             let project = new Project(data.projects, idFirstProject, i);
             project.show('#list_projects');
