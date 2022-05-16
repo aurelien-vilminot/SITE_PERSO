@@ -12,6 +12,7 @@ function displayProjects() {
 
 function changePage(currentPage, nbPages) {
 	getProjectsOfPage(currentPage * 2);
+	console.log(currentPage);
 
 	if (currentPage === nbPages) {
 		$('#change_page')
@@ -20,7 +21,7 @@ function changePage(currentPage, nbPages) {
 			.fadeIn(350)
 			.append(
 				$('<a/>')
-					.html('Suivant')
+					.html('Suiv.')
 					.css({ 'margin-right': '0.5vw', cursor: 'pointer' })
 					.on('click', () => {
 						changePage(--currentPage, nbPages);
@@ -31,7 +32,7 @@ function changePage(currentPage, nbPages) {
 						changePage(--currentPage, nbPages);
 					})
 			);
-	} else if (currentPage === 1) {
+	} else if (Math.round(currentPage) === 1) {
 		$('#change_page')
 			.empty()
 			.hide()
@@ -43,7 +44,7 @@ function changePage(currentPage, nbPages) {
 						changePage(++currentPage, nbPages);
 					}),
 				$('<a/>')
-					.html('Précédent')
+					.html('Prec.')
 					.css({ 'margin-left': '0.5vw', cursor: 'pointer' })
 					.on('click', () => {
 						changePage(++currentPage, nbPages);
@@ -61,7 +62,7 @@ function changePage(currentPage, nbPages) {
 						changePage(++currentPage, nbPages);
 					}),
 				$('<a/>')
-					.html('Précédent')
+					.html('Prec.')
 					.css({ 'margin-right': '0.5vw', 'margin-left': '0.5vw', cursor: 'pointer' })
 					.on('click', () => {
 						changePage(++currentPage, nbPages);
@@ -69,7 +70,7 @@ function changePage(currentPage, nbPages) {
 				$('<p/>')
 					.html('|'),
 				$('<a/>')
-					.html('Suivant')
+					.html('Suiv.')
 					.css({ 'margin-left': '0.5vw', 'margin-right': '0.5vw', cursor: 'pointer' })
 					.on('click', () => {
 						changePage(--currentPage, nbPages);

@@ -7,10 +7,10 @@ $myProjects = new Project();
 
 if (isset($_GET['requestType']) && $_GET['requestType'] == 'nbProjects') {
     $nbProjects = $myProjects->getNbProjects();
-    $obj->nbPages = ceil($nbProjects[0][0]/2);
+    $obj->nbPages = $nbProjects[0][0] / 2;
 } else {
     $idFirstProject = $_GET['idFirstProject'];
-    $result = $myProjects->getProjects($idFirstProject,$idFirstProject - 1);
+    $result = $myProjects->getProjects($idFirstProject, $idFirstProject - 1);
     $obj->projects = $result[0];
     $obj->nbProjects = $result[1];
 }
