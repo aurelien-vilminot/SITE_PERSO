@@ -66,13 +66,7 @@ class Project {
 						top: '0'
 					})
 					.append(
-						$('<div class="divProject"/>')
-							.css({
-								'margin-top': '0',
-								'padding-bottom': '2vw',
-								width: '60vw',
-								background: 'white'
-							})
+						$('<div class="divBigProject"/>')
 							.append(
 								$('<div/>')
 									.css({
@@ -113,22 +107,10 @@ class Project {
 												'align-items': 'center',
 												width: '28vw'
 											}),
-										$('<div/>')
-											.css({
-												display: 'flex',
-												'flex-direction': 'column',
-												'justify-content': 'center',
-												'align-items': 'center',
-												width: '24vw'
-											})
+										$('<div id="project_description_div"/>')
 											.append(
-												$('<p/>')
-													.html(self.description)
-													.css({
-														'margin-bottom': '2vw',
-														'font-size': '1vw',
-														'text-align': 'initial'
-													}),
+												$('<p id="project_description_text"/>')
+													.html(self.description),
 												$('<div/>')
 													.css({
 														display: 'flex',
@@ -136,10 +118,7 @@ class Project {
 														'align-items': 'center'
 													})
 													.append(
-														$('<p/>').html('Ressources :&nbsp;' + self.link)
-															.css({
-																'font-style': 'italic'
-															})
+														$('<p id="ressources"/>').html('Ressources :&nbsp;' + self.link)
 													),
 												$('<hr id="hrProject"/>'),
 												$('<div id="projectLanguages"/>')
@@ -158,13 +137,6 @@ class Project {
 			$('#imgs_project')
 				.append(
 					$('<img src="../../files/img_projects/' + self.id + '_' + i + '.png" alt="Illustration Projet"/>')
-						.css({
-							'max-height': '15vw',
-							'max-width': '28vw',
-							'margin-right': '1.5vw',
-							'margin-bottom': '1vw',
-							border: '0.1vw solid #212322'
-						})
 				);
 		}
 		this.projectLanguage();
@@ -175,10 +147,6 @@ class Project {
 		for (let language in this.languages) {
 			$('#projectLanguages').append(
 				$('<img src="../../files/ic_languages/' + self.languages[language].toLowerCase() + '.png" alt="Logo langage" title="' + self.languages[language] + '"/>')
-					.css({
-						'min-width': '2vw',
-						'max-height': '3vw'
-					})
 			);
 		}
 	}
