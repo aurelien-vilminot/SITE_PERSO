@@ -37,31 +37,13 @@ class Project {
 		$(div)
 			.append(
 				$('<div class="divProject"/>')
-					.css({
-						width: '27vw',
-						height: '30vw'
-					})
 					.append(
 						$('<h3/>').html(self.title),
 						$('<img src="../../files/img_projects/' + self.id + '_1.png" alt="Illustration Projet"/>')
-							.css({
-								'max-width': '25vw',
-								'max-height': '31%',
-								'margin-bottom': '1vw',
-								border: '0.1vw solid #212322'
-							}),
+							.css({}),
 						$('<p/>')
-							.html(self.shortDescription)
-							.css({
-								'font-size': '1.3vw',
-								height: '38%'
-							}),
+							.html(self.shortDescription),
 						$('<a/>')
-							.css({
-								cursor: 'pointer',
-								'font-size': '1.3vw',
-								'font-weight': 'bold'
-							})
 							.html('En savoir plus')
 							.on('click', () => self.bigShow())
 					)
