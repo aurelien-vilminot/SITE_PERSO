@@ -1,7 +1,23 @@
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 400px) {
 
     body {
         font-size: 5vw;
+    }
+
+    header {
+        font-size: 3.4vw;
+    }
+
+    .scrolled {
+        font-size: 3vw;
+    }
+
+    .scrolled img {
+        width: 20%;
+    }
+
+    nav {
+        width: 70%;
     }
 
     h1 {

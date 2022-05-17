@@ -130,6 +130,15 @@ p i {
     flex-direction: row;
 }
 
+#first_div_puzzle {
+    margin-right: 1.5vw;
+    align-items: flex-end;
+}
+
+#bike img {
+    width: 15vw;
+}
+
 #projects {
     display: flex;
     flex-direction: column;
@@ -247,6 +256,7 @@ input[type="submit"]:hover {
     #top img {
         width: auto;
         height: 100%;
+        border-radius: 3vw;
     }
 
     #contact, #contact div, #about section, #contentCompany, #sports div, #list_projects {
@@ -265,6 +275,7 @@ input[type="submit"]:hover {
 
     #location iframe {
         height: 70vw;
+        margin-bottom: 2vw;
     }
 
     #location p, #company p, #company li {
@@ -287,6 +298,18 @@ input[type="submit"]:hover {
 
     #company img {
         width: 60vw;
+    }
+
+    #sports img {
+        width: 50vw;
+    }
+
+    #bike img {
+        width: 30vw;
+    }
+
+    .puzzle_picture div {
+        margin-top: 0;
     }
 
     #contact section {
