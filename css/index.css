@@ -189,6 +189,11 @@ p i {
     font-size: 1vw;
 }
 
+#change_page img {
+    width: 1.5vw;
+    cursor: pointer;
+}
+
 #contact, #contact div, #about section, #contentCompany, #sports div, #list_projects {
     display: flex;
 }
@@ -353,6 +358,14 @@ input[type="submit"]:hover {
 
     .divProject img {
         max-height: 30%;
+    }
+
+    #change_page {
+        font-size: 4vw;
+    }
+
+    #change_page img {
+        width: 5.5vw;
     }
 
 

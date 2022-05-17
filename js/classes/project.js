@@ -39,8 +39,7 @@ class Project {
 				$('<div class="divProject"/>')
 					.append(
 						$('<h3/>').html(self.title),
-						$('<img src="../../files/img_projects/' + self.id + '_1.png" alt="Illustration Projet"/>')
-							.css({}),
+						$('<img src="../../files/img_projects/' + self.id + '_1.png" alt="Illustration Projet"/>'),
 						$('<p/>')
 							.html(self.shortDescription),
 						$('<a/>')

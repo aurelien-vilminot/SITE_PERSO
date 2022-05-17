@@ -27,7 +27,6 @@ function changePage(currentPage, nbPages) {
 						changePage(--currentPage, nbPages);
 					}),
 				$('<img src="../files/img/next_page.png" alt="Next icon"/>')
-					.css({ width: '1.5vw', cursor: 'pointer' })
 					.on('click', () => {
 						changePage(--currentPage, nbPages);
 					})
@@ -39,7 +38,6 @@ function changePage(currentPage, nbPages) {
 			.fadeIn(350)
 			.append(
 				$('<img src="../files/img/prev_page.png" alt="Precédent icon"/>')
-					.css({ width: '1.5vw', cursor: 'pointer' })
 					.on('click', () => {
 						changePage(++currentPage, nbPages);
 					}),
@@ -57,7 +55,6 @@ function changePage(currentPage, nbPages) {
 			.fadeIn(350)
 			.append(
 				$('<img src="../files/img/prev_page.png" alt="Precédent icon"/>')
-					.css({ width: '1.5vw', cursor: 'pointer' })
 					.on('click', () => {
 						changePage(++currentPage, nbPages);
 					}),
@@ -76,7 +73,6 @@ function changePage(currentPage, nbPages) {
 						changePage(--currentPage, nbPages);
 					}),
 				$('<img src="../files/img/next_page.png" alt="Next icon"/>')
-					.css({ width: '1.5vw', cursor: 'pointer' })
 					.on('click', () => {
 						changePage(--currentPage, nbPages);
 					})
