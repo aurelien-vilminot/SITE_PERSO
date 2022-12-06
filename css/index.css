@@ -40,12 +40,16 @@
 }
 
 #location p {
-    margin-top: 2vw;
+    margin-top: 0.5vw;
     text-align: justify;
 }
 
+#first_location_paragraph {
+    margin-top: 2vw !important;
+}
+
 #location p, #company p, #company li {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
 }
 
 #location iframe {
