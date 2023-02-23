@@ -8,7 +8,7 @@
     background: #6A93CA;
     margin-bottom: 3vw;
     height: 80vh;
-
+    width: 100%;
 }
 
 #top div {
@@ -134,12 +134,16 @@ p i {
     flex-direction: row;
 }
 
-#first_div_puzzle {
-    margin-right: 1.5vw;
+#mountains {
+    justify-content: space-evenly;
+    margin: 0 1.5vw 0 1.5vw;
+}
+
+#road_bike {
     align-items: flex-end;
 }
 
-#bike img {
+#bike img, #road_bike img {
     width: 15vw;
 }
 
