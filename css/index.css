@@ -378,6 +378,7 @@ input[type="submit"]:hover {
 
     #company img {
         width: 60vw;
+        margin-bottom: 1vw;
     }
 
     #sports img {
@@ -388,10 +389,13 @@ input[type="submit"]:hover {
         width: 30vw;
     }
 
+    #cloud_img {
+        margin-bottom: 2vw;
+    }
+
     .puzzle_picture div {
         margin-top: 0;
     }
-
 
     .divProject {
         width: 80vw;
