@@ -12,7 +12,6 @@ function displayProjects() {
 
 function changePage(currentPage, nbPages) {
 	getProjectsOfPage(currentPage * 2);
-	console.log(currentPage);
 
 	if (currentPage === nbPages) {
 		$('#change_page')
